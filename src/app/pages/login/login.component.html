@@ -1,0 +1,84 @@
+<section class="h-100 gradient-form" style="background-color: #eeeeee98;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+  
+                  <div class="text-center">
+                    <img src="favicon.ico"
+                      style="width: 185px;" alt="logo">
+                    <h4 class="mt-1 mb-5 pb-1">StoryStack</h4>
+                  </div>
+  
+                  
+                    <p i18n>Lütfen hesabına giriş yap</p>
+                    <form class="row g-3 needs-validation" [formGroup]="userForm" >
+                    <div class="form-outline mb-4">
+                      <input type="email" id="form2Example11" class="form-control"
+                        placeholder="Email adresinizi yazınız" formControlName="email" />
+                      <label class="form-label" for="form2Example11">Email</label>
+                      <div class="text-danger" *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].touched || userForm.controls['email'].dirty)">
+                        <span *ngIf="userForm.controls['email'].errors?.['required']"i18n> Email Boş Olamaz </span>
+                        <span *ngIf="userForm.controls['email'].errors?.['email']" i18n> Email Geçersiz </span>
+                    </div>
+                    </div>
+  
+                    <div class="form-outline mb-4">
+                      <input type="password" id="form2Example22" class="form-control" formControlName ="password"/>
+                      <label class="form-label" for="form2Example22"i18n>Şifre</label>
+                      <div class="text-danger" *ngIf="userForm.controls['password'].invalid && (userForm.controls['password'].touched || userForm.controls['password'].dirty)">
+                        <span *ngIf="userForm.controls['password'].errors?.['required']"i18n> Şifre Boş Olamaz </span>
+                        <span *ngIf="userForm.controls['password'].errors?.['minLength']"i18n> Şifre 6 Karakterden Az Olamaz </span>
+                    </div>
+                    </div>
+                    
+                  </form>
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="login()">Log
+                        in</button>
+                      <a class="text-muted" href="#!"i18n>Şifreni mi unuttun?</a>
+                    </div>
+  
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                      <p class="mb-0 me-2"i18n>Hesabın yok mu?</p>
+                      <button type="button" class="btn btn-outline-warning" [routerLink]="['/register']"i18n>Üye Ol</button>
+                    </div>
+  
+                  
+  
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">Bir Kütüphaneden Daha Fazlası!</h4>
+                  <p class="small mb-0">Story Stack olarak, kitaplara olan tutkumuzu ve okuma sevgimizi çevrimiçi
+                    bir platforma taşımak için yola çıktık. <br />
+                    Misyonumuz, her türden okur için benzersiz ve kapsamlı bir kitap deneyimi
+                    sunmaktır. Story Stack, hem geleneksel hem de dijital kitap severlere hitap
+                    edecek şekilde tasarlanmıştır. <br />
+                    <b>Sitemizde neler yapabilirsiniz?</b> <br />
+                    <b>Kitap Satın Alın:</b> Story Stack üzerinden en yeni ve en popüler kitapları
+                    kolayca satın alabilirsiniz. Geniş kitap koleksiyonumuzda farklı tür ve
+                    kategorilerde birçok kitabı bulabilirsiniz. <br />
+                    <b>Fiziksel Kütüphaneden Ödünç Alın:</b> Geleneksel kitap okuma deneyimini tercih
+                    edenler için, fiziksel kütüphanemizden kitap ödünç alabilirsiniz. Sitemiz
+                    üzerinden ödünç alma işlemlerini kolayca gerçekleştirebilir ve en sevdiğiniz
+                    kitapları kapınıza kadar teslim alabilirsiniz. Story Stack olarak, her
+                    seviyeden okuyucuya hitap eden bir platform sunmaya kararlıyız.
+                    Kullanıcılarımızın ihtiyaçlarına yönelik kişiselleştirilmiş bir hizmet
+                    anlayışı benimsiyoruz. Okuma deneyiminizi daha keyifli ve verimli hale
+                    getirmek için sürekli olarak çalışıyoruz. <br />
+                    Siz de Story Stack'in büyüyen topluluğuna katılarak, okuma dünyasının
+                    kapılarını aralayabilirsiniz. Okuma yolculuğunuzda size eşlik etmekten
+                    mutluluk duyarız!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

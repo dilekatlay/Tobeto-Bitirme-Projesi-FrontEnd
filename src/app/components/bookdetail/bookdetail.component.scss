@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+.book-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+    border: 1px solid rgb(151, 151, 151);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1) ;
+  }
+  
+  .book-thumbnail {
+    width: 300px;
+    height: 500px;
+    margin-bottom: 20px;
+  }
+  
+  .book-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 25%;
+    
+  }
+  
+  .book-details {
+    text-align: left;
+    margin-left: 50px;
+  }
+  
+  .book-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .book-details p {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .book-details a{
+    text-decoration: none;
+    color: black;
+  }
+
+.btn-success {
+    margin-left: 20%;
+}
+  
+.btn-warning {
+    margin-left: 10%;
+}

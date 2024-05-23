@@ -1,0 +1,20 @@
+<div class="category-container">
+  <h2 class="category-heading">Kategoriler</h2>
+  <input class="form-control" placeholder="Arama" [(ngModel)]="searchKey" />
+  <div class="category-grid">
+    <div *ngFor="let category of categories | filterCategory : searchKey: ['categoryName']">
+      <div class="category-card">
+        <a [routerLink]="['/categories/', category.id]" class="category-link">
+          <div class="category-thumbnail">
+            <img
+              [src]="category.imageUrl"
+              [alt]="category.categoryName"
+              class="category-image"
+            />
+          </div>
+          <h3 class="category-name">{{ category.categoryName }}</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

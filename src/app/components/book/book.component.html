@@ -1,0 +1,21 @@
+<div class="row" *ngFor="let book of books" >
+  <div class="col-md-4 col-sm-6">
+    <div class="card mb-30"><a class="card-img-tiles" href="#" data-abc="true">
+        <div class="inner">
+          <div class="main-img"></div>
+          <div class="thumblist"></div>
+        </div></a>
+      <div class="card-body text-center">
+        <h4 class="card-title">{{this.book.bookName}}</h4>
+        <img src="{{this.book.imageUrl}}" alt="hobbit">
+        <p class="text-muted">{{this.book.categoryId}}</p><a class="btn btn-outline-primary btn-sm" href="#" data-abc="true">View Products</a>
+      </div>
+    </div>
+  </div>
+
+
+  
+  
+
+
+<router-outlet></router-outlet>

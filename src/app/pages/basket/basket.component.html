@@ -1,0 +1,13 @@
+    <div class="sepet-container">
+      <div *ngFor="let product of products" class="urun">
+        <img [src]="product.imageUrl" [alt]="product.bookName">
+        <h3>{{ product.bookName }}</h3>
+        <p>Fiyat: {{ product.unitPrice }} TL</p>
+        <button (click)="removeFromBasket(product.id)">Sil</button>
+      </div>
+    </div>
+    <div class="toplam">
+      <h2>Toplam Tutar: {{ getTotalPrice() }} TL</h2>
+      <button>Alışverişi Tamamla</button>
+    </div>
+  

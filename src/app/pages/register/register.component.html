@@ -1,0 +1,55 @@
+<section class="vh-100 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+            <form class="row g-3 needs-validation" [formGroup]="userForm" >
+            <div class="mb-md-5 mt-md-4 pb-5" >
+
+              <h2 class="fw-bold mb-2 text-uppercase"i18n>Üye ol</h2>
+              <p class="text-white-50 mb-5"i18n>Lütfen bilgilerini doğru gir</p>
+
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="typeEmailX" class="form-control form-control-lg" formControlName="email" />
+                <label class="form-label" for="typeEmailX">Email</label>
+                <div class="text-danger" *ngIf="userForm.controls['email'].invalid && (userForm.controls['email'].touched || userForm.controls['email'].dirty)">
+                  <span *ngIf="userForm.controls['email'].errors?.['required']"i18n> Email Boş Olamaz </span>
+                  <span *ngIf="userForm.controls['email'].errors?.['email']"i18n> Email Geçersiz </span>
+              </div>
+              </div>
+
+              <div class="form-outline form-white mb-4">
+                <input type="password" id="typePasswordX" class="form-control form-control-lg" formControlName="password" />
+                <label class="form-label" for="typePasswordX"i18n>Şifre</label>
+                <div class="text-danger" *ngIf="userForm.controls['password'].invalid && (userForm.controls['password'].touched || userForm.controls['password'].dirty)">
+                  <span *ngIf="userForm.controls['password'].errors?.['required']"i18n> Şifre Boş Olamaz </span>
+                  <span *ngIf="userForm.controls['password'].errors?.['minLength']"i18n> Şifre 6 Karakterden Az Olamaz </span>
+              </div>
+              </div>
+              
+              <div class="form-outline form-white mb-4">
+                <input type="password"  class="form-control form-control-lg"  formControlName="PasswordConfirm" />
+                <label class="form-label" for="typePasswordX"i18n >Şifreni Doğrula</label>
+                <div class="text-danger" *ngIf="userForm.controls['PasswordConfirm'].invalid && (userForm.controls['PasswordConfirm'].touched || userForm.controls['PasswordConfirm'].dirty)">
+                  <span *ngIf="userForm.controls['PasswordConfirm'].errors?.['required']"i18n> Şifre Boş Olamaz </span>
+                  <span *ngIf="userForm.controls['PasswordConfirm'].errors?.['minLength']"i18n> Şifre 6 Karakterden Az Olamaz </span>
+              </div>
+              </div>
+            
+              <p class="small mb-5 pb-lg-2"><a class="text-white-50" [routerLink]="['/login']" i18n>Zaten bir hesabın var mı?</a></p>
+
+              <button class="btn btn-outline-light btn-lg px-5" type="submit" (click)="StepOne()"i18n>2. Adıma Geç</button>
+
+        
+
+            </div>
+          </form>
+          
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

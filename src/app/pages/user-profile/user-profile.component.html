@@ -1,0 +1,82 @@
+<section style="background-color: #eee;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a [routerLink]="['/homepage']"i18n>Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page"i18n>Profiliniz</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+
+              <h5 class="my-3"> {{member.FirstName + member.LastName}} </h5>
+              <div class="d-flex justify-content-center mb-2">
+                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" [routerLink]="['/profile-update']"i18n>Profili Düzenle</button>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4 mb-lg-0">
+            
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>İsim</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0"> {{member.FirstName}} </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>Soyisim</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{member.LastName}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>Mail</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0"> {{user.email}} </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>TC Kimlik No</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{member.NationalIdentity}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>Address</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{member.Adress}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+</section>
+

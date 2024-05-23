@@ -1,0 +1,41 @@
+<!-- contact.component.html -->
+<h5 class="bizimleiletisimegecin">Bizimle iletişime geçin..</h5>
+<div class="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+    <label for="fname">Adınız</label>
+    <input formControlName="firstname" type="text" id="fname" name="firstname" placeholder="Adınız.." />
+
+    <label for="lname">Soyadınız</label>
+    <input formControlName="lastname" type="text" id="lname" name="lastname" placeholder="Soyadınız.." />
+
+    <label for="Mail">Mail Adresiniz</label>
+    <input formControlName="email" type="email" id="Mail" name="Mail" placeholder="example@gmail.com.." />
+
+    <label for="subject">Açıklama</label>
+    <textarea formControlName="subject" id="subject" name="subject" placeholder="Bir şeyler yazın.." style="height: 80px"></textarea>
+
+    <input type="submit" value="Gönder" />
+  </form>
+</div>
+
+
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385396.3210727367!2d28.68253046522561!3d41.005370214106165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa7040068086b%3A0xe1ccfe98bc01b0d0!2zxLBzdGFuYnVs!5e0!3m2!1str!2str!4v1713483024326!5m2!1str!2str"
+  width="450"
+  height="300"
+  style="border-radius: 10px; margin-left: 100px; margin-top: 10px;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe>
+
+<div class="contact-info">
+  <h3>İletişim Bilgileri</h3>
+  <p>Adres: Örnek Sokak No: 123, İstanbul</p>
+  <p>Telefon: +90 555 123 45 67</p>
+  <p>E-posta: </p>
+</div>
+
+<router-outlet></router-outlet>
+
+

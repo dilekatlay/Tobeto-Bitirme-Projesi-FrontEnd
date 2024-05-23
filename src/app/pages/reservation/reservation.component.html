@@ -1,0 +1,62 @@
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"i18n>
+          Kitap Ekleme
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"i18n>
+          Kategori Ekleme
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+         
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" i18n>
+          Kitap Teslim Alma
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="input-group mb-3">
+              <input type="text" #inputValue >
+              <button class="btn btn-outline-secondary" type="submit" id="button-addon2" (click)="getReservations(inputValue.value)" i18n>Reservasyonları Getir</button>
+              <select class="form-select" [(ngModel)]="Reserve" id="inputGroupSelect01">
+                  <option [ngValue]="Reserv"  *ngFor="let Reserv of Reservs"><ng-container *ngIf="Reserv.isReserv"> {{Reserv.book.bookName}}</ng-container></option>
+              </select> 
+             
+          </div>
+          <button class="btn btn-outline-secondary" type="submit" id="button-addon2" (click)="updateReservation()" i18n>teslim al</button>
+          <div class="input-group mb-3" >
+           
+
+
+          </div>
+         
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- <select class="form-select" id="inputGroupSelect01">
+    <option [value]="Reservs"(change)="onReservSelect(Reservs)" *ngFor="let Reservs of Reserv" >{{Reservs.book.bookName}}</option>
+  </select> -->

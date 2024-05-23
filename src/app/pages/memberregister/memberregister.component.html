@@ -1,0 +1,55 @@
+<section class="vh-100 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body p-5 text-center">
+              <form class="row g-3 needs-validation" [formGroup]="memberForm"  >
+              <div class="mb-md-5 mt-md-4 pb-5">
+  
+                <h2 class="fw-bold mb-2 text-uppercase"i18n>Üye ol</h2>
+                <p class="text-white-50 mb-5"i18n>Lütfen bilgilerini doğru gir</p>
+  
+                <div class="form-outline form-white mb-4">
+                  <input type="text" id="typeEmailX" class="form-control form-control-lg" formControlName="firstName" />
+                  <label class="form-label" for="typeEmailX"i18n>Ad</label>
+                  <div class="text-danger" *ngIf="memberForm.controls['firstName'].invalid && (memberForm.controls['firstName'].touched)">
+                    <span *ngIf="memberForm.controls['firstName'].errors?.['required']"i18n> İsim Boş Olamaz </span>
+                    <span *ngIf="memberForm.controls['firstName'].errors?.['minLength']"i18n> İsim 3 Karakterden Az Olamaz </span>
+                </div>
+                </div>
+  
+                <div class="form-outline form-white mb-4">
+                  <input type="text" id="typePasswordX" class="form-control form-control-lg" formControlName="lastName" />
+                  <label class="form-label" for="typePasswordX"i18n>Soyad</label>
+                  <div class="text-danger" *ngIf="memberForm.controls['lastName'].invalid && (memberForm.controls['lastName'].touched)">
+                    <span *ngIf="memberForm.controls['lastName'].errors?.['required']"i18n> Soyad Boş Olamaz </span>
+                    <span *ngIf="memberForm.controls['lastName'].errors?.['minLength']"i18n> Soyad 3 Karakterden Az Olamaz </span>
+                </div>
+                </div>
+                <div class="form-outline form-white mb-4">
+                  <input type="text"  class="form-control form-control-lg" formControlName="nationalIdentity" />
+                  <label class="form-label" for="typePasswordX" i18n >Tc Kimlik No</label>
+                  <div class="text-danger" *ngIf="memberForm.controls['nationalIdentity'].invalid && (memberForm.controls['nationalIdentity'].touched)">
+                    <span *ngIf="memberForm.controls['nationalIdentity'].errors?.['required']"i18n> Kimlik No Boş Olamaz </span>
+                    <span *ngIf="memberForm.controls['nationalIdentity'].errors?.['minLength']"i18n> Kimlik No 11 Karakterden Az Olamaz </span>
+                </div>
+                </div>
+                <div class="form-outline form-white mb-4">
+                  <input type="text"  class="form-control form-control-lg" formControlName="adress" />
+                  <label class="form-label" for="typePasswordX">Adress</label>
+                </div>
+                <button class="btn btn-outline-light btn-lg px-5" type="submit" (click)="StepTwo()" i18n>Üyeliğini Tamamla</button>
+  
+          
+  
+              </div>
+            </form>
+            
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

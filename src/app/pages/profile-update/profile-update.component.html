@@ -1,0 +1,82 @@
+<section style="background-color: #eee;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col">
+          <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a [routerLink]="['/homepage']">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page"i18n>Profiliniz</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+
+              <h5 class="my-3"> {{memberForm.get('FirstName')+""+memberForm.get('LastName') }} </h5>
+              <div class="d-flex justify-content-center mb-2">
+                <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary" (click)="UpdateUser()"i18n>Kaydet</button>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-4 mb-lg-0">
+            
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>İsim</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0"> {{memberForm.get('FirstName')}} </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>Soyisim</p>
+                </div>
+                <div class="col-sm-9">
+                  <p class="text-muted mb-0">{{memberForm.get('LastName')}}</p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>Mail</p>
+                </div>
+                <div class="col-sm-9">
+                  <input class="text-muted mb-0" [value]="memberForm.get('email')"> 
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>Şifre</p>
+                </div>
+                <div class="col-sm-9">
+                  <input class="text-muted mb-0">
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-3">
+                  <p class="mb-0"i18n>Address</p>
+                </div>
+                <div class="col-sm-9">
+                  <input class="text-muted mb-0" [value]="memberForm.get('Adress')">
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+</section>
+

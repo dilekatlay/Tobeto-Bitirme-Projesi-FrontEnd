@@ -1,0 +1,18 @@
+<div class="literature-container">
+    <h2 class="literature-heading">{{ category?.categoryName }}</h2>
+  
+    <input class="form-control" placeholder="Search" [(ngModel)]="searchKey" />
+    <div class="literature-grid">
+      <div *ngFor="let book of books | filterBook: searchKey: ['bookName', 'categoryId', 'numberOfPages', 'numberOfCopies', 'writer']">
+        <div class="literature-card">
+          <a [routerLink]="['/books/', book.id]">
+            <div class="literature-thumbnail">
+              <img [src]="book.imageUrl" [alt]="book.bookName" class="literature-image" />
+            </div>
+            <h3 class="literature-name">{{ book.bookName }}</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

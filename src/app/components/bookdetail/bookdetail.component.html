@@ -1,0 +1,51 @@
+<div *ngIf="book" class="book-detail-container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="book-thumbnail">
+        <img [src]="[book.imageUrl]" [alt]="book.bookName" class="book-image" />
+        <!-- <advanced-image [cldImg]="img[book.imageUrl]"alt="{{ book.bookName }}" class="book-image"></advanced-image>    -->
+      </div>
+      <button
+        *ngIf="book.numberOfCopies > 0"
+        type="button"
+        class="btn btn-success"
+        aria-current="pages"
+        (click)="addToBasket(book)"
+      >
+        Sepete Ekle
+      </button>
+      <button
+        *ngIf="book.numberOfCopies <= 0"
+        type="button"
+        class="btn btn-danger"
+      >
+        Haber Ver
+      </button>
+
+      <button type="button" class="btn btn-warning">Ödünç Al</button>
+    </div>
+    <div class="col-md-7">
+      <div class="book-details">
+        <h6>
+          <i
+            ><strong
+              ><h1>{{ book.bookName }}</h1>
+            </strong></i
+          >{{ book.writer }}
+        </h6>
+        <hr />
+        <p>ISBN No: {{ book.isbnNo }}</p>
+        <p>Stok Adedi: {{ book.numberOfCopies }}</p>
+        <p>Sayfa Sayısı: {{ book.numberOfPages }}</p>
+        <a [routerLink]="['/categories', category?.id]"
+          ><p>Kategori: {{ category?.categoryName }}</p></a
+        >
+        <p>
+          <i><strong>Özet</strong></i
+          ><br />
+          {{ book.summary }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

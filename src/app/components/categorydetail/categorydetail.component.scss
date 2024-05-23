@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
+.literature-container {
+    background-color: rgba(108,117,125,255);
+    height: 170px;
+    margin-bottom: 700px;
+    padding: 0 20px ;
+  }
+  
+  .form-control{
+    margin-bottom: 50px;
+  }
+  
+  .literature-heading {
+    font-size: 50px;
+    text-align: center;
+    padding: 80px;
+    margin-bottom: 1px;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  .literature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    
+    
+  }
+  
+  .literature-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+  }
+
+  .literature-card a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .literature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .literature-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .literature-thumbnail {
+    flex: 1; /* Resmin yer kaplamasını sağlar */
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* Resmi yatayda ortalar */
+  align-items: center;
+  }
+
+  .literature-image { 
+    max-width: 100%; /* Resmin kutunun genişliğine sığması sağlanır */
+  max-height: 100%; /* Resmin kutunun yüksekliğine sığması sağlanır */
+  object-fit: contain;
+  }
+  
+  .literature-name {
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  

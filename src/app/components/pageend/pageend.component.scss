@@ -1,0 +1,33 @@
+/* Footer'ı sayfanın en altına sabitleme */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 5px;
+    text-align: center;
+    margin-top: auto;
+    
+  }
+  
+  /* Footer içeriği */
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Footer bağlantılarının stili */
+  .footer-content nav a {
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* Footer bağlantılarının üzerine gelindiğinde stil */
+  .footer-content nav a:hover {
+    text-decoration: underline;
+  }
+  

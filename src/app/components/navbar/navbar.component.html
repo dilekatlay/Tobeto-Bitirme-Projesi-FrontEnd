@@ -1,0 +1,37 @@
+<nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="homepage"><img src="https://res.cloudinary.com/dew2adsux/image/upload/v1714659662/Logo.png" alt="StoryStack"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="pages" href="homepage" >AnaSayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="pages" href="categories">Kategoriler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="pages" href="aboutus">Hakkımızda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="pages" href="contact">İletişim</a>
+        </li>
+      </ul>
+      
+      <div class="dropdown">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Kullanıcı Profili
+        </a>
+      
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item " href="#">Profili Düzenle</a></li>
+          <li><a class="dropdown-item " aria-current="pages" [routerLink]="['basket/']">Sepete Git</a></li>
+          <li><a class="dropdown-item " href="#">Giriş Yap</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>

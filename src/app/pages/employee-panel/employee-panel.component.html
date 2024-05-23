@@ -1,0 +1,115 @@
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"i18n>
+          Kitap Ekleme
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <form [formGroup]="bookForm" (ngSubmit)="addBook(bookForm.value)" >
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01"i18n>Resim ekle</label>
+              <input type="file" accept="image/*" class="form-control"  (change)="SelectedBookImage($event)">
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01"i18n>Kitap Adı</label>
+              <input type="text" class="form-control" placeholder="Kitap Adı" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="bookName">
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01"i18n>ISBN Numarası</label>
+              <input type="text" class="form-control" placeholder="ISBN Numarası" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="isbnNo">
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01"i18n>Kopya Adedi</label>
+              <input type="text" class="form-control" placeholder="Kopya Adedi" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="numberOfCopies">
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01"i18n>Sayfa Adedi</label>
+              <input type="text" class="form-control" placeholder="Sayfa Adedi" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="numberOfPages">
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01"i18n>Yazar</label>
+              <input type="text" class="form-control" placeholder="Sayfa Adedi" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="writer">
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01"i18n>Özet</label>
+              <input type="text" class="form-control" placeholder="Sayfa Adedi" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="summary">
+            </div>
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="inputGroupFile01"i18n>Fiyat</label>
+              <input type="text" class="form-control" placeholder="Sayfa Adedi" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="unitPrice">
+            </div>
+            <div class="input-group mb-3" >
+              <label class="input-group-text" for="inputGroupSelect01"i18n>Kategori</label>
+              <select class="form-select" id="inputGroupSelect01"  formControlName="CategoryId" >
+                <option [value]="Categorys.id" *ngFor="let Categorys of Category" (change)="onCategorySelect($event)">{{Categorys.categoryName}}</option>
+              </select>
+            </div>
+            <div class="input-group mb-3" >
+              <label class="input-group-text" for="inputGroupSelect01"i18n>Raf</label>
+              <select class="form-select" id="inputGroupSelect01"  formControlName="ShelfId" >
+                <option [value]="Shelfs.id" *ngFor="let Shelfs of Shelf" (change)="onShelfSelect($event)">{{Shelfs.shelfLocation}}</option>
+              </select>
+            </div>
+            <button type="submit"i18n >deneme</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <form [formGroup]="categoryForm" (ngSubmit)="addCategory(categoryForm.value)">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"i18n>
+          Kategori Ekleme
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01"i18n>Resim ekle</label>
+            <input type="file" accept="image/*" class="form-control"  (change)="SelectedImage($event)">
+          </div>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" formControlName="categoryName">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2" i18n >Kategori Ekle</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
+    <div class="accordion-item">
+      <form [formGroup]="shelfAdd" (ngSubmit)="addShelf(shelfAdd.value)">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"i18n>
+          Raf Ekle
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01"i18n>Raf Numarası</label>
+            <input type="text"  class="form-control"formControlName="shelfNo" >
+            <label class="input-group-text" for="inputGroupFile01"i18n>Raf Adı</label>
+            <input type="text"  class="form-control"formControlName="shelfLocation" >
+          </div>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01"i18n>Kapasite</label>
+            <input type="text"  class="form-control"formControlName="capacity" >
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2" i18n >Raf Ekle</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- <select class="form-select" id="inputGroupSelect01">
+    <option [value]="Reservs"(change)="onReservSelect(Reservs)" *ngFor="let Reservs of Reserv" >{{Reservs.book.bookName}}</option>
+  </select> -->
